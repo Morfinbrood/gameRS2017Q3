@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black; 
+}
+
+canvas{
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.menu_butt {
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+}
+
+.gameMenu{
+    height:900px; 
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-direction:column;
+    background-color: black; 
+}
+
+.name {
+    color: rgb(0, 124, 128);
+    font-size: 30px;
+}
+button {
+    height: 50px;
+}
+button:hover {
+    background-color: rgb(0, 124, 128);
+    color: white;
+}
+
+.overlay {
+	background: #000;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1000;
+	opacity: .5;
+}
+.visible {
+	background: #fff;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-top: -200px;
+	overflow: hidden;
+	z-index: 2000;
+	width: 500px;
+	padding: 0px;
+	margin-left: -250px;
+}
+.modal_wind button {
+	font-size: 30px;
+	width: 175px;
+	float: right;
+	line-height: 20px;
+	margin: 1.2em;
+	border: none;
+	background: transparent;
+	color: blue;
+}
+.modal_wind .playAgainBut {
+	float: left;
+}
+.modal_wind button[type="button"]:hover {
+	cursor: pointer;
+	color: navy;
+	text-decoration: underline;
+}
+.modal_wind h2 {
+	text-align: center;
+	color: #555;
+}
+.content {
+	padding: 0 1em;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+    background: WhiteSmoke;
+    font-size: 20px;
+}
+.buttons {
+	height: 250px;
+	width: 100%; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;  
+    flex-direction:column;
+}
+/* gallery */
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 218px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}

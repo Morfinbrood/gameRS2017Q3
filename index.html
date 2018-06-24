@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Game</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="gameMenu" id="gameMenuID">
+        <div class="name">
+            <h1>Königstiger vs Zombies</h1>
+        </div>
+        <div class="buttons">
+            <button class="menu_butt" id="loadingBut" type="button">
+                Loading...
+            </button>
+            <button class="menu_butt" id="startBut" style="display:none;" type="button">
+                Start
+            </button>
+            <button class="menu_butt" onClick="getElementById('controls_wind').removeAttribute('style');" type="button">
+                Controls
+            </button>
+            <button class="menu_butt" onClick="getElementById('description_wind').removeAttribute('style');" type="button">
+                Description
+            </button>
+            <button class="menu_butt" onClick="getElementById('screen_wind').removeAttribute('style');" type="button">
+                Screenshots
+            </button>
+            <button class="menu_butt" onClick="getElementById('about_wind').removeAttribute('style');" type="button">
+                About
+            </button>
+        </div>
+
+        <div class="modal_wind" id="controls_wind" style="display:none;">
+            <div class="overlay"></div>
+            <div class="visible">
+                <h2>Controls</h2>
+                <div class="content">
+                    <table border="0" width="100%" cellpadding="5">
+                        <tr>
+                            <th>Action</th>
+                            <th>Button</th>
+                        </tr>
+                        <tr>
+                            <td>Move forward</td>
+                            <td>W</td>
+                        </tr>
+                        <tr>
+                            <td>Move backward</td>
+                            <td>S</td>
+                        </tr>
+                        <tr>
+                            <td>Turn left</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Turn right</td>
+                            <td>D</td>
+                        </tr>
+                        <tr>
+                            <td>Turn tower left</td>
+                            <td>Arrow Left</td>
+                        </tr>
+                        <tr>
+                            <td>Turn tower right</td>
+                            <td>Arrow Right</td>
+                        </tr>
+                        <tr>
+                            <td>Fire big gun</td>
+                            <td>Space</td>
+                        </tr>
+                        <tr>
+                            <td>Fire machinegun</td>
+                            <td>Arrow Top</td>
+                        </tr>
+                        <tr>
+                            <td>Random music track</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>Decrease music volume</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>Increase music volume</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>Music On/Off (default off)</td>
+                            <td>0</td>
+                        </tr>
+
+                    </table>
+                </div>
+                <button type="button" onClick="getElementById('controls_wind').style.display='none';">Close</button>
+            </div>
+        </div>
+
+        <div class="modal_wind" id="description_wind" style="display:none;">
+            <div class="overlay"></div>
+            <div class="visible">
+                <h2>Description</h2>
+                <div class="content">
+                    <img src="screens/gameplay.gif" alt="game play" width="470">
+                    <ul>
+                        <li>You have a tank, and you need to save the hospital from zombies.</li>
+                        <li>If all zombie died you win.</li>
+                        <li>If a zombie gets to the hospital, you will lose hp. </li>
+                        <li>And don't shoot at the hospital!</li>
+                    </ul>
+                </div>
+                <button type="button" onClick="getElementById('description_wind').style.display='none';">Close</button>
+            </div>
+        </div>
+
+        <div class="modal_wind" id="screen_wind" style="display:none;">
+            <div class="overlay"></div>
+            <div class="visible screens">
+                <h2>Screenshots</h2>
+                <div class="content">
+
+                    <div class="gallery">
+                        <a target="_blank" href="screens/start_game.png">
+                            <img src="screens/start_game.png" alt="start game" width="300" height="200">
+                        </a>
+                        <div class="desc">Game after start</div>
+                    </div>
+
+                    <div class="gallery">
+                        <a target="_blank" href="screens/in_progress_game.png">
+                            <img src="screens/in_progress_game.png" alt="game in progress" width="300" height="200">
+                        </a>
+                        <div class="desc">Game in progress</div>
+                    </div>
+
+                    <div class="gallery">
+                        <a target="_blank" href="screens/player_lose.png">
+                            <img src="screens/player_lose.png" alt="player win" width="300" height="200">
+                        </a>
+                        <div class="desc">Player lose</div>
+                    </div>
+
+                    <div class="gallery">
+                        <a target="_blank" href="screens/player_win.png">
+                            <img src="screens/player_win.png" alt="player lose" width="300" height="200">
+                        </a>
+                        <div class="desc">Player win</div>
+                    </div>
+
+                </div>
+                <button type="button" onClick="getElementById('screen_wind').style.display='none';">Close</button>
+            </div>
+        </div>
+
+        <div class="modal_wind" id="about_wind" style="display:none;">
+            <div class="overlay"></div>
+            <div class="visible">
+                <h2>Additional information</h2>
+                <div class="content">
+                    <p>Developed by Yury Staravoitau for 15 days for
+                        <a href="https://school.rollingscopes.com/" target="_blank">Rolling Scopes</a> courses
+                    </p>
+                    <p>No libraries only pure JS!</p>
+                    <p>More info on presentation:</br>
+                        <a target="_blank" href="http://slides.com/yurystaravoitau/deck-1">http://slides.com/yurystaravoitau/deck-1</a>
+                    </p>
+                </div>
+                <button type="button" onClick="getElementById('about_wind').style.display='none';">Close</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal_wind" id="win_wind" style="display:none;">
+        <div class="overlay"></div>
+        <div class="visible">
+            <h2>Congratulations!</h2>
+            <div class="content">
+                <h2> YOU WIN!</h2>
+            </div>
+
+            <button class="playAgainBut" type="button" onClick="getElementById('win_wind').style.display='none'; interface2.restartGame()">Play again</button>
+            <button type="button" onClick='location.href="http://yurystar.h1n.ru/"'>Main menu</button>
+        </div>
+    </div>
+
+    <div class="modal_wind" id="lose_wind" style="display:none;">
+        <div class="overlay"></div>
+        <div class="visible">
+            <h2>Game over</h2>
+            <div class="content">
+                <h2>YOU LOSE!</h2>
+            </div>
+
+            <button class="playAgainBut" type="button" onClick=" getElementById('lose_wind').style.display='none'; interface2.restartGame()">Play again</button>
+            <button type="button" onClick='location.href="http://yurystar.h1n.ru/"'>Main menu</button>
+        </div>
+    </div>
+
+</body>
+
+<!-- <script src="js/gameInterface.js"></script>
+<script src="js/sound.js"></script>
+<script src="js/collidersCollection/collidersCollection.js"></script>
+<script src="js/gameobjects/gameObject.js"></script>
+<script src="js/gameobjects/gameStaticObject.js"></script>
+<script src="js/gameobjects/gameMovingObject.js"></script>
+<script src="js/gameobjects/gamePlayerObject.js"></script>
+<script src="js/gameobjects/gameEnemyObject.js"></script>
+<script src="js/gameobjects/gameBulletObject.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/game.js"></script> -->
+
+<script src="dist/js/app.js"></script>
+
+</html>
